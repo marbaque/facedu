@@ -1,0 +1,16 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{% if children %}
+  {% spaceless %}
+    <div class="dropbutton-wrapper">
+      <div class="dropbutton-widget">
+        {{ children }}
+      </div>
+    </div>
+  {% endspaceless %}
+{% endif %}

@@ -1,0 +1,57 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+@import '../shared';
+
+.page {
+
+    /* ================================================================================ */
+    /* = Footer celeste =============================================================== */
+    /* ================================================================================ */
+
+    .footer__color_1 {
+        background: #98A2A9;
+        padding: 20px 0;
+        
+        p, a {
+            color: white;
+        }
+    }
+
+    /* ================================================================================ */
+    /* = Footer ======================================================================= */
+    /* ================================================================================ */
+
+    .footer {
+        border-top:1px white solid;
+        background: #98A2A9;
+
+        p, a, li {
+            color: white;
+            font-size:1.3rem;
+        }
+
+        a:hover, a:focus {
+            color: white;
+            background-color: initial;
+            text-decoration: underline;
+        }
+        
+        hr {
+            border-top: thin solid white;
+        }
+
+    }
+
+    .footer__info {
+        height: 61px;
+        @media (max-width: $xs-max) {
+            height: 75px;
+        }
+    }
+
+}

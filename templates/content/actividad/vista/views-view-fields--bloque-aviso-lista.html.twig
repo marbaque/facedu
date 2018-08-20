@@ -1,0 +1,33 @@
+
+
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+
+{% if '<img' in fields.field_imagenes.content | render %}
+    <div class="col-xs-12 col-sm-4">
+        <div class="noticia__lista-img">
+            {{ fields.field_imagenes.content }}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+{% else %}
+    <div class="col-xs-12 no-float">
+{% endif %}
+        <div class="aviso__lista-title">
+            <h2>{{ fields.title.content }}</h2>
+        </div>
+        <div class="aviso__lista-body">
+            {{ fields.body.content }}
+        </div>
+        <div class="aviso__lista-view-node">
+            {{ fields.view_node.content }}
+        </div>
+    </div>
+    <br>
+    <hr class="col-xs-12">
+    <br>

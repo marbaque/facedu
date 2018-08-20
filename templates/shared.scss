@@ -1,0 +1,111 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+//
+// Estilos compartidos que no van a ser modificados por otras hojas de estilo
+//
+
+/* ================================================================================ */
+/* = Variables ==================================================================== */
+/* ================================================================================ */
+
+// Pantallas xs
+$xs-min: 0px;
+$xs-max: 767px;
+
+// Pantallas sm
+$sm-min: 768px;
+$sm-max: 991px;
+
+// Pantallas md
+$md-min: 992px;
+$md-max: 1199px;
+
+// Pantallas lg
+$lg-min: 1200px;
+$lg-max: 9999px;
+
+// Alto del footer
+$footer-height: 195px;
+
+/* ================================================================================ */
+/* = Estilos útiles =============================================================== */
+/* ================================================================================ */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.block-center {
+  margin: 0 auto;
+}
+
+.btn-right {
+  float: right;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-hover {
+  &:focus, &:hover {
+    text-decoration: none;
+  } 
+}
+
+.spacer {
+  margin-bottom: 30px;
+}
+
+// Basado en http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing
+.clearfix:after { 
+  content: " ";
+  display: block; 
+  height: 0; 
+  clear: both;
+}
+
+/* ================================================================================ */
+/* = Estilos para heredar ========================================================= */
+/* ================================================================================ */
+
+.default-navbar {
+  padding: 0px 15px;
+  margin: 0px;
+  border: none;
+  border-radius: 0px;
+}
+
+.default-panel {
+  border-color: #ECECEC;
+  
+  p {
+    margin: 0px;
+  }
+  
+  .panel-heading {
+    background-color: #ECECEC;
+    border-color: #ECECEC;
+  }
+}
+
+.noticia__imagen-contenedor img {
+    margin: 0 auto;
+}

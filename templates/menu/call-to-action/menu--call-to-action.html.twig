@@ -1,0 +1,13 @@
+{#
+  Tema UCR
+  Desarrollado por:
+  - Marco Artavia Quesada
+  - Rubén Jiménez Goñi
+#}
+<ul class="menu__cta">
+	{% for item in items %}
+  	<li class="menu__cta-tooltip" data-toggle="tooltip" data-placement="bottom" title="{{ item.title }}">
+			<a href="{{ item.url }}" class="menu__cta-{{ item.title | lower }}"><i class="accessible_elem">Logotipo de {{ item.title }}</i></a>
+    </li>
+  {% endfor %}
+</ul>

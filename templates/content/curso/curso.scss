@@ -1,0 +1,85 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+
+.page {
+
+   .table-curso__row{
+        li{
+            list-style:none;
+        }
+        
+        ul{
+            padding:0;
+        }
+    }
+
+    .table-curso {
+        width:100%;
+        text-align: left;
+
+        // Estilo de todas las filas
+        tr {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 25px;
+            padding-left:0;
+            padding-right:0;
+        }
+
+        // Estilo de las filas de header
+        tr.table-curso__header {
+            padding-bottom: 10px;
+        }
+        
+        // Estilo de las filas normales
+        tr.table-curso__row {
+            border-top: 1px solid #DDD;
+            color: #4d4d4d;
+        }
+
+        // Estilo de las filas normales
+        tr.table-curso__row:nth-child(4n) {
+           background-color: #F9F9F9;
+        }
+
+
+        // Para todas las celdas  
+        td, th {
+            vertical-align: top;
+            display: inline-block !important;
+            float: left !important; // Para el Bootstrap Grid System
+            
+            &, & p {
+            text-align: left;
+            }
+        } 
+        
+        // Para las filas de header
+        .table-curso__header {
+            border-top: none;
+            
+            p {
+                font-weight: bold;
+            }
+        }
+
+        // Para mostrar solo una fila de header
+        tr + tr.table-curso__header {
+            display:none;
+        }
+        
+        .table_download a {
+            background-image: url("../../../images/content/descargas/f-contenidos__descarga.svg");
+            display: inline-block;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+}

@@ -1,0 +1,9 @@
+<article class="actividad_mini-calendario panel panel-frontpage">
+    <h2 class="frontpage-titulo panel-heading block-title">{{ 'Calendar' | t }}</h2>
+    {% for row in rows %}
+        {{ row.content }}
+    {% endfor %}
+    <div class="text-right">
+        <a href="{{ url('<front>') }}/calendario" class="view-more">{{ 'View more' | t }}</a>
+    </div>
+</article>

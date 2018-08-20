@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* ================================================================================ */
+/* = Variables ==================================================================== */
+/* ================================================================================ */
+/* ================================================================================ */
+/* = Estilos útiles =============================================================== */
+/* ================================================================================ */
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.block-center {
+  margin: 0 auto; }
+
+.btn-right {
+  float: right; }
+
+.no-margin {
+  margin: 0; }
+
+.no-padding {
+  padding: 0; }
+
+.no-hover:focus, .no-hover:hover {
+  text-decoration: none; }
+
+.spacer {
+  margin-bottom: 30px; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both; }
+
+/* ================================================================================ */
+/* = Estilos para heredar ========================================================= */
+/* ================================================================================ */
+.default-navbar {
+  padding: 0px 15px;
+  margin: 0px;
+  border: none;
+  border-radius: 0px; }
+
+.default-panel {
+  border-color: #ECECEC; }
+  .default-panel p {
+    margin: 0px; }
+  .default-panel .panel-heading {
+    background-color: #ECECEC;
+    border-color: #ECECEC; }
+
+.noticia__imagen-contenedor img {
+  margin: 0 auto; }
+
+/* ================================================================================ */
+/* = Normalize ==================================================================== */
+/* ================================================================================ */
+:focus {
+  outline: none; }
+
+/* ================================================================================ */
+/* = HTML y Body ================================================================== */
+/* ================================================================================ */
+@media (min-width: 0px) {
+  html {
+    font-size: 52.5%; } }
+@media (min-width: 768px) {
+  html {
+    font-size: 57.5%; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 62.5%; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 67.5%; } }
+
+body {
+  background-color: #f4f4f4;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.55; }
+
+/* ================================================================================ */
+/* = Esto mantiene el footer abajo ================================================ */
+/* ================================================================================ */
+* {
+  margin: 0; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%; }
+
+.page {
+  min-height: 100%;
+  position: relative; }
+  .page .page--content {
+    padding-bottom: 195px; }
+  .page .page--footer {
+    width: 100%;
+    height: 195px;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+/* ================================================================================ */
+/* = Tamaños de letras y colores ================================================== */
+/* ================================================================================ */
+.page {
+  min-height: 100%; }
+  .page h1, .page h1 a {
+    color: #204C6F;
+    font-size: 2.7rem;
+    line-height: 3.0rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter; }
+  .page h2, .page h2 a {
+    color: #666666;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter; }
+  .page h3, .page h3 a {
+    color: #666666;
+    font-size: 1.9rem;
+    line-height: 2.1rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter; }
+  .page h4, .page h4 a {
+    color: #666666;
+    font-size: 1.9rem;
+    line-height: 2.1rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: bold; }
+  .page p {
+    margin-bottom: 1.5rem;
+    font-size: 1.527rem;
+    font-weight: 300; }
+  .page li {
+    color: #204C6F;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: lighter; }
+  .page hr {
+    margin: 10px 0px; }
+  .page a {
+    display: inline-block;
+    color: #204C6F; }
+    .page a:hover {
+      color: #0090D8;
+      text-decoration: underline; }
+  .page a.view-more {
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .page p small, .page p small a {
+    font-size: 1.4rem; }
+
+/* ================================================================================ */
+/* = Otros ======================================================================== */
+/* ================================================================================ */
+.page .page--content form {
+  margin-bottom: 20px; }
+  .page .page--content form .btn {
+    float: right; }
+
+.r-content {
+  margin-bottom: 100px; }
+
+.accessible_elem {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal; }
+
+/* ================================================================================ */
+/* = Estilo básico para carruseles ================================================ */
+/* ================================================================================ */
+.page .slick__carousel {
+  opacity: 0;
+  transition: opacity fast;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px; }
+.page .slick__item:focus {
+  outline: none; }
+.page .slick-arrow {
+  padding: 0; }
+.page .slick-dots {
+  bottom: 5px;
+  left: 0px; }
+.page .slick__left, .page .slick__right {
+  border: none;
+  position: absolute;
+  top: 40%;
+  background-color: white;
+  color: white;
+  font-size: 30px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px; }
+  .page .slick__left:hover, .page .slick__left:focus, .page .slick__right:hover, .page .slick__right:focus {
+    outline: none;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px; }
+.page .slick__left {
+  left: 6px; }
+.page .slick__right {
+  right: 6px; }
+.page .ghost {
+  height: 100%; }
+.page .valign {
+  display: inline-block;
+  vertical-align: middle; }
+.page .padding-article {
+  padding: 0px 0 60px 0; }
+.page .block-title {
+  margin: 0;
+  padding: 2.5px 15px; }
+
+/*# sourceMappingURL=base.css.map */

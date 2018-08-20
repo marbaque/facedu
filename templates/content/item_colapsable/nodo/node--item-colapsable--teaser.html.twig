@@ -1,0 +1,35 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{% set unique_id = url | replace({ '/' : '_' }) %}
+{% set collapse_unique_id = 'collapse_' ~ url | replace({ '/' : '_' }) %}
+<div class="panel n-item-referencia">
+  <div>
+    <div role="tab" id="{{ unique_id }}">
+          <div class="list-group-item collapsable-item collapsed" data-toggle="collapse" data-target="#{{ collapse_unique_id }}" data-parent="#accordion">      
+            <div class="button_wrapper valign">
+              <div class="ghost valign"></div>
+              <span class="glyphicon glyphicon-plus valign"></span>
+            </div>
+            <div class="valign list_title">
+              <div class="ghost valign">
+              </div>
+              <div class="title_container valign">
+                {{ label }}
+              </div>
+            </div>
+          </div>
+    </div>
+  </div> 
+  <div id="{{ collapse_unique_id }}" class="panel-collapse collapse clearfix" role="tabpanel" aria-labelledby="{{ unique_id}} ">
+    <div class="n-item__contenido panel-body col-xs-12">
+	    <br>
+	    {{ content.body }}
+    </div>
+  </div>
+</div>
+

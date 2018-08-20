@@ -1,0 +1,13 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div{{ attributes }}>
+  {% if first_new -%}
+    <a id="new"></a>
+  {%- endif %}
+  <span class="visually-hidden">{{ icon_title }}</span>
+</div>

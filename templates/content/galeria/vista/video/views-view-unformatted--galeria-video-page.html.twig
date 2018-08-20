@@ -1,0 +1,22 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{#
+<ul class="galeria-header__links">
+  <li><a href="{{ url('<front>') }}galeria-albumes">{{ 'Imágenes' | t }}</a></li>
+  <li class="galeria-header__link--active"><a href="{{ url('<front>') }}galeria-videos">{{ 'Videos' | t }}</a></li>
+  <li><a href="{{ url('<front>') }}galeria-presentaciones">{{ 'Presentaciones' | t }}</a></li>
+</ul>
+#}
+
+<div class="masonry-grid masonry-grid-videos">
+  {% for row in rows %}
+    <div{{ row.attributes.addClass('masonry-grid-item') }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

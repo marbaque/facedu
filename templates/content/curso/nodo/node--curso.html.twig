@@ -1,0 +1,86 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+
+{% if content.field_curso_descripcion | render and content.field_curso_descarga | render %}
+
+	<tr class="table-curso__header clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-3"><p>{{ 'Nombre' | t }}</p></td>
+			<td class="col-xs-12 col-sm-6"><p>{{ 'Descripción' | t }}</p></td>
+			<td class="col-xs-12 col-sm-3"><p>{{ 'Descarga' | t }}</p></td>
+		</div>
+	</tr>
+	<tr class="table-curso__row clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-3">
+				<p>{{ node.getTitle() }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-6">
+				<p>{{ content.field_curso_descripcion }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-3">
+				<p>{{ content.field_curso_descarga }}</p>
+		 	</td>
+		</div>
+	</tr>
+	
+{% elseif content.field_curso_cupo | render and content.field_curso_descarga | render %}
+
+	<tr class="table-curso__header clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-4"><p>{{ 'Nombre' | t }}</p></td>
+			<td class="col-xs-12 col-sm-4"><p>{{ 'Cupo' | t }}</p></td>
+			<td class="col-xs-12 col-sm-4"><p>{{ 'Descarga' | t }}</p></td>
+		</div>
+	</tr>
+	<tr class="table-curso__row clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-4">
+				<p>{{ node.getTitle() }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-4">
+				<p>{{ content.field_curso_cupo }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-4">
+				<p>{{ content.field_curso_descarga }}</p>
+		 	</td>
+		</div>
+	</tr>
+
+{% else %}
+
+	<tr class="table-curso__header clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-2"><p>{{ 'Sigla' | t }}</p></td>
+			<td class="col-xs-12 col-sm-3"><p>{{ 'Nombre' | t }}</p></td>
+			<td class="col-xs-12 col-sm-2"><p>{{ 'Requisito' | t }}</p></td>
+			<td class="col-xs-12 col-sm-3"><p>{{ 'Co-Requisito' | t }}</p></td>
+			<td class="col-xs-12 col-sm-2"><p>{{ 'Descarga' | t }}</p></td>
+		</div>
+	</tr>
+	<tr class="table-curso__row clearfix">
+		<div class="row">
+			<td class="col-xs-12 col-sm-2">
+				<p>{{ content.field_curso_sigla }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-3">
+				<p>{{ node.getTitle() }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-2">
+				<p>{{ content.field_curso_requisito }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-3">
+				<p>{{ content.field_curso_co_requisito }}</p>
+		 	</td>
+			<td class="col-xs-12 col-sm-2">
+				<p>{{ content.field_curso_descarga }}</p>
+		 	</td>
+		</div>
+	</tr>
+	
+{% endif %}

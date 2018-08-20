@@ -1,0 +1,12 @@
+.page {
+  /* ================================================================================ */
+  /* = Nodo ========================================================================= */
+  /* ================================================================================ */ }
+  .page .enlaces-icono_lista {
+    list-style: none;
+    padding-left: 0; }
+    .page .enlaces-icono_lista li {
+      display: inline-block;
+      margin: 15px; }
+
+/*# sourceMappingURL=enlaces-icono.css.map */

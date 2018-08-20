@@ -1,0 +1,38 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<h1 class="page-title pagina-basica__titulo">{{ label }}</h1>
+
+{{ content.field_pagina_imagenes }}
+
+<div class="n-proyecto__body">
+  {{ content.body }}
+  <br>
+  <p>
+    <b class="title">
+      {{ 'Participants' | t }}:
+    </b>
+  </p>
+
+  <ul class="n-proyecto-personas">
+    {{ content.field_proyecto_participantes }}
+  </ul>
+  <br>
+  <p>
+    <b class="title">
+      {{ 'Coordinators' | t }}:
+    </b>
+  </p>
+
+  <ul class="n-proyecto-personas">
+    {{ content.field_proyecto_coordinadores }}
+  </ul>
+
+  <br>
+  
+  {{ content.field_proyecto_referencias }}
+</div>

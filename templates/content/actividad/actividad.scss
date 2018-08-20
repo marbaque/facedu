@@ -1,0 +1,122 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+.page {
+
+    /* ================================================================================ */
+    /* = Nodo ========================================================================= */
+    /* ================================================================================ */
+
+    .actividad__titulo {
+        margin-bottom: 20px;
+    }
+
+    .actividad__imagen-contenedor img {
+        margin: 0 auto;
+    }
+
+    .actividad__descripcion {
+        text-align: center;
+    }
+
+    /* ================================================================================ */
+    /* = Vista Calendario Mini ======================================================== */
+    /* ================================================================================ */
+
+    .actividad_mini-calendario {
+
+        .text-right{
+            margin: 10px;
+        }
+    }
+
+
+    .actividad__mini-calendario-titulo {
+        font-size: 2.4rem;
+        color: #666666;
+        margin-bottom: 10px;
+        border-color: #ECECEC;
+    }
+
+    .actividad_mini-calendario-fecha {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 15px 10% 15px 0;
+        width: 25%;
+        font-size: 1.5rem;
+        color: #999999;
+        font-weight: bold;
+        border-right: 2px solid #999999; 
+        padding-right: 5%;
+        text-align: right;
+    }
+
+    .actividad_mini-calendario-nombre {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 15px 0;
+        width: 59%;
+        font-size: 1.7rem;
+    }
+
+    .aviso__categoria{
+        list-style: none;
+        padding: 0;
+
+        li{
+            display: inline-block;
+        }
+
+        a{
+            background-color: #E6E6E6;
+            color: #204D6F;
+            font-weight: normal;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 0.6em 0.6em 0.3em;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25em;
+            font-size: 1.3rem;
+        }
+    }
+
+    .actividad__cuerpo{
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .aviso__lista {
+        list-style: none;
+        padding-left: 0;
+
+        .row{
+            margin-top:15px;
+        }
+
+        .aviso__lista-title{
+            margin-top: 0;
+            h2, a{
+                margin-top: 0;
+            }
+        }
+
+        .aviso__lista-view-node{
+            text-align: right;
+        }
+
+        .noticia__lista-img{
+            ul{
+                list-style: none;
+                padding: 0;
+            }
+        }
+    }
+}

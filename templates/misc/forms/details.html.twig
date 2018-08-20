@@ -1,0 +1,22 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<details{{ attributes }}>
+  {%- if title -%}
+    <summary{{ summary_attributes }}>{{ title }}</summary>
+  {%- endif -%}
+
+  {% if errors %}
+    <div>
+      {{ errors }}
+    </div>
+  {% endif %}
+
+  {{ description }}
+  {{ children }}
+  {{ value }}
+</details>

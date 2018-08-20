@@ -1,0 +1,114 @@
+bootstrap:
+  css:
+    component:
+      vendor/bootstrap/css/bootstrap.css: {}
+  js:
+    vendor/bootstrap/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+
+colorbox:
+  css:
+    component:
+      vendor/colorbox/css/colorbox.css: {}
+  js:
+    vendor/colorbox/js/jquery.colorbox-min.js: {}
+  dependencies:
+    - core/jquery
+
+swipe:
+  css:
+  js:
+    vendor/swipe/jquery.touchSwipe.min.js: {}
+  dependencies:
+    - core/jquery
+    
+slick:
+  css:
+    component:
+      vendor/slick/slick/slick.css: {}
+      vendor/slick/slick/slick-theme.css: {}
+  js:
+    vendor/slick/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
+masonry:
+  css:
+  js:
+    vendor/masonry/js/masonry.pkgd.min.js: {}
+  dependencies:
+    - core/jquery
+    
+imagesloaded:
+  css:
+  js:
+    vendor/imagesloaded/js/imagesloaded.pkgd.min.js: {}
+  dependencies:
+    - core/jquery
+    
+galleria:
+  css:
+    component:
+      vendor/galleria/galleria.classic.css: {}
+  js:
+    vendor/galleria/galleria-1.4.2.min.js: {}
+    vendor/galleria/galleria.classic.min.js: {}
+  dependencies:
+    - core/jquery
+    
+fullcalendar:
+  css:
+    component:
+      vendor/fullcalendar/fullcalendar.min.css: {}
+  js:
+    vendor/fullcalendar/lib/moment.min.js: {}
+    vendor/fullcalendar/fullcalendar.min.js: {}
+    vendor/fullcalendar/locale-all.js: {}
+  dependencies:
+    - core/jquery
+
+global-css:
+  css:
+    theme:
+      templates/shared.css: {}
+      templates/base.css: {}
+      templates/content/content.css: {}
+      templates/content/actividad/actividad.css: {}
+      templates/content/actividad/calendario.css: {}
+      templates/content/contacto/contacto.css: {}
+      templates/content/descargas/descargas.css: {}
+      templates/content/descargas-icono/descargas-icono.css: {}
+      templates/content/enlaces/enlaces.css: {}
+      templates/content/enlaces-icono/enlaces-icono.css: {}
+      templates/content/frontpage/frontpage.css: {}
+      templates/content/galeria/galeria.css: {}
+      templates/content/grupos/grupos.css: {}
+      templates/content/pagina/pagina.css: {}
+      templates/content/persona/persona.css: {}
+      templates/content/personas/personas.css: {}
+      templates/content/curso/curso.css: {}
+      templates/content/cursos/cursos.css: {}
+      templates/content/proyecto/proyecto.css: {}
+      templates/content/proyectos/proyectos.css: {}
+      templates/content/publicacion/publicacion.css: {}
+      templates/content/item_colapsable/item_colapsable.css: {}
+      templates/content/items_colapsables/items_colapsables.css: {}
+      templates/content/enlaces-imagen-frontpage/enlaces-imagen.css: {}
+      templates/content/area-comision/area-comision.css: {}
+      templates/content/areas-comisiones/areas-comisiones.css: {}
+      templates/footer/footer.css: {}
+      templates/header/header.css: {}
+      templates/menu/menu.css: {}
+      templates/misc/maintenance.css: {}
+
+global-js:
+  js:
+    javascript/banner.js: {}
+    javascript/noticias-carrusel.js: {}
+    javascript/script.js: {}
+    javascript/old.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

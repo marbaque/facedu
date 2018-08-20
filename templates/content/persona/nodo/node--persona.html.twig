@@ -1,0 +1,23 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="row n-persona-full">
+  <h1> {{label}} </h1>
+	<div class="n-persona__imagen">
+  	{{ content.field_persona_foto }}
+  </div>
+  <div class="n-pagina__body">
+    {{ content.field_persona_cargo }}
+    {{ content.field_persona_categoria }}
+    {{ content.field_persona_telefono }}
+    {{ content.field_persona_correo }}
+    <br>
+    {{ content.body }}
+    <br>
+    {{ content.field_persona_curriculo }}
+  </div>
+</div>

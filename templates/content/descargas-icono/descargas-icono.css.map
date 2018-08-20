@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAaI,4BAAuB,CACnB,UAAU,CAAE,IAAI,CAChB,YAAY,CAAE,CAAC,CAEf,+BAAG,CACC,OAAO,CAAE,YAAY,CACrB,MAAM,CAAE,IAAI",
+"sources": ["descargas-icono.scss"],
+"names": [],
+"file": "descargas-icono.css"
+}

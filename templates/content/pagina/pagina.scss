@@ -1,0 +1,71 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+.page {
+
+    /* ================================================================================ */
+    /* = Nodo ========================================================================= */
+    /* ================================================================================ */
+
+    .pagina__imagenes {
+        margin-bottom: 20px;
+    }
+
+    .pagina__imagen-contenedor img {
+        margin: 0 auto;
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    .pagina__cuerpo{
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .pagina__descripcion {
+        text-align: center;
+    }
+
+    .pagina__titulo {
+        margin-bottom: 20px;
+    }
+
+    .pagina__cuerpo {
+        margin-bottom: 30px;
+
+        table {
+            width: 100% !important;
+            border: none;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 10px 7px;
+            border: none;
+            border-bottom: 1px solid #DDD;
+            font-size: 1.5rem;
+        }
+
+        tr:nth-child(even){
+            background-color: #F9F9F9;
+        }
+
+        th {
+            text-transform: uppercase;
+        }    
+
+        hr {
+            border-top: 1px solid #DDD;
+        }  
+    }
+    
+    .pagina__referencias {
+        list-style: none;
+        padding-left: 0;
+    }
+}

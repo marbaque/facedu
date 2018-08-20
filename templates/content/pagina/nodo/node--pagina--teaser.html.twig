@@ -1,0 +1,23 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<article class="padding-article">
+  <div class="teaser_pagina-basica-title">
+    <p tabindex="0">
+      {{ content.field_pagina_titulo_de_portada }}
+    </p>
+  </div>
+  <hr>
+  {{ content.field_banner }}
+  {% if not page %}
+    <h2 class="page-title pagina__titulo" tabindex="0">{{ label }}</h2>
+  {% endif %}
+  <div class="pagina__cuerpo" tabindex="0">
+    {{ content.body }}
+    <a class="col-xs-12 pull-right text-right view-more" href="{{ url }}"> {{ 'Read More' | t }} </a>
+  </div>
+</article>

@@ -1,0 +1,22 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<article>
+  <div class="hidden change_banner">
+  </div>
+  {% if not page %}
+    <h1 class="page-title actividad__titulo">{{ label }}</h1>
+  {% endif %}
+    {{ content.field_noticia_imagenes }}
+    {{ content.field_actividad_fecha }}
+    {{ content.field_actividad_lugar }}
+    {{ content.body }}
+    <div class="noticia__lista-view-node">
+        {{ fields.view_node.content }}
+    </div>
+  <br>
+</article>

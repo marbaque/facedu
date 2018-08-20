@@ -1,0 +1,18 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<ul class="descargas_lista">
+    {% for item in items %}
+        {% if '~' in (item.content | render).__toString() %}
+            <li class="sub-level">
+        {% else %}
+            <li>
+        {% endif %}
+            {{ item.content }}
+        </li>
+    {% endfor %}
+</ul>

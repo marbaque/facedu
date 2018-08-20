@@ -1,0 +1,44 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+
+<section class="carrusel-frontpage-item" aria-labelledby="titulo_carrusel_aria" tabindex="0">
+    {% if content.field_carrusel_frontpage_e_img | render %}
+    <div class="col-xs-12 col-sm-6">
+        <div class="carrusel-frontpage__carousel-img" >
+            {{ content.field_carrusel_frontpage_e_img }}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+    {% else %}
+    <div class="col-xs-12">
+    {% endif %}
+        <div class="carrusel-frontpage__carousel-title enlace-icono" >
+            <h2 aria-labelledby="titulo_carrusel_aria" tabindex="0" role="log"  
+                 aria-live="assertive" 
+                 aria-atomic="false" 
+                 aria-relevant="additions">
+                {{ label }}
+            </h2>
+				<span class="hidden" aria-hidden="true" id="titulo_carrusel_aria">{{ label }}</span>
+        </div>
+        <div class="carrusel-frontpage__carousel-body" aria-labelledby="body_carrusel_aria" tabindex="0" aria-live="assertive" 
+                 aria-atomic="false" 
+                 aria-relevant="additions">
+            <div id="body_carrusel_aria">{{ content.body }}</div>
+        </div>
+        {% if content.field_carrusel_frontpage_enl | render %}
+            <div class="enlace-icono">
+                <div class ="hidden">
+                    {{ content.field_carrusel_frontpage_enl }}
+                </div>
+                <br>
+                <a class="col-xs-12 pull-right text-right view-more" href=""> {{ 'View more' | t }} </a>
+            </div>
+        {% endif %}
+    </div>
+</section>

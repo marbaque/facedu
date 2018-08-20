@@ -1,0 +1,36 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<article>
+  <div class="hidden change_banner">
+  </div>
+  {% if not page %}
+    <h1 class="page-title actividad__titulo">{{ label }}</h1>
+  {% endif %}
+  {{ content.field_pagina_imagenes }}
+  {{ content.field_actividad_fecha }}
+  {{ content.field_actividad_lugar	 }}
+
+  <div class="actividad__cuerpo">
+    {{ content.body }}
+  </div>
+  {{ content.field_pagina_referencias }}
+  <br>
+  <a href="{{ url('<front>') }}/avisos" class="view-more pull-right">{{ 'View more' | t}}</a>
+  <br>
+  <hr>
+  {{ content.field_actividad_etiquetas }}
+  <div class="n-noticia__social_share col-xs-12 col-sm-6 pull-right">
+    <div class="facebook col-xs-6 text-right">
+      <div id="fb-root"></div>
+      <div class="fb-share-button" data-href="{{url}}" data-layout="button"></div>
+    </div>
+    <div class="twitter col-xs-6 text-left">
+      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+  </div>
+</article>

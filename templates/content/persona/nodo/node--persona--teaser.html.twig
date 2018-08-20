@@ -1,0 +1,49 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{% set unique_id = url | replace({ '/' : '_' }) %}
+{% set collapse_unique_id = 'collapse_' ~ url | replace({ '/' : '_' }) %}
+<div class="panel panel-default n-persona-referencia">
+  <div role="tab" id="{{ unique_id }}">
+        <div class="list-group-item collapsable-item collapsed" data-toggle="collapse" data-target="#{{ collapse_unique_id }}" data-parent="#accordion">      
+          <div class="button_wrapper valign">
+          	<div class="ghost valign"></div>
+          	<span class="glyphicon glyphicon-plus valign"></span>
+      		</div>
+	        <div class="valign list_title">
+	        	<div class="ghost valign">
+	        	</div>
+	        	<div class="title_container valign">
+	          	{{ label }}
+	          </div>
+	        </div>
+        </div>
+  </div> 
+  <div id="{{ collapse_unique_id }}" class="panel-collapse collapse clearfix" role="tabpanel" aria-labelledby="{{ unique_id}} ">
+    <div class="panel-body col-xs-12 col-md-4">
+	    	{{ content.field_persona_foto }}
+  	</div>
+    <div class="n-persona__contenido panel-body col-xs-12 col-sm-8">
+	    <div class="n-persona-contact_info">
+	      <p> <b>{{ label }}</b></p>
+				{{ content.field_persona_cargo }}
+	      {{ content.field_persona_categoria }}
+	      {{ content.field_persona_telefono }}
+	      {{ content.field_persona_correo }}
+	    </div>
+	    <br>
+	    {{ content.body }}
+	    <br>
+			{% if content.field_persona_curriculo | render %}
+				<div class="n-persona-curriculo">
+					{{ content.field_persona_curriculo }}
+				</div>
+			{% endif %}
+    </div>
+  </div>
+</div>
+

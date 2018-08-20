@@ -1,0 +1,20 @@
+<div class="hidden layout-ucr-2016"></div>
+<div class="row">
+	<div class="col-xs-12 col-md-10 col-md-offset-1">
+  	{% if content.top %}
+	  	<div class="carrusel">
+	    	{{ content.top }}
+	  	</div>
+  	{% endif %}
+	</div>
+	<div class="col-xs-12 col-md-6 col-md-offset-1">
+  	{% if content.left %}
+	    {{ content.left }}
+  	{% endif %}
+	</div>
+	<div class="col-xs-12 col-md-3 col-md-offset-1">
+  	{% if content.right %}
+	    {{ content.right }}
+		{% endif %}
+	</div>
+</div>

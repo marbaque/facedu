@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a formatted image field.
+ *
+ * Available variables:
+ * - image: A collection of image data.
+ * - image_style: An optional image style.
+ * - url: An optional URL the image can be linked to.
+ *
+ * @see template_preprocess_image_formatter()
+ */
+#}
+{% if url %}
+  <a href="{{ url }}">
+  	{{ image }}
+  	<i class="accessible_elem">{{ url }}</i>
+  </a>
+{% else %}
+  {{ image }}
+{% endif %}

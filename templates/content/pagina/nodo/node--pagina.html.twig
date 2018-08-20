@@ -1,0 +1,27 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<article>
+  {{ content.field_banner }}
+  {% if not page %}
+    <h1 class="page-title pagina__titulo">{{ label }}</h1>
+  {% endif %}
+  <div class="pagina__imagenes">
+    {{ content.field_pagina_imagenes }}
+  </div>
+
+  <div class="pagina__imagenes">
+    {{ content.field_imagenes }}
+  </div>
+
+  <div class="pagina__cuerpo">
+    {{ content.body }}
+  </div>
+  <div id="pagina__referencias">
+    {{ content.field_pagina_referencias }}
+  </div>
+</article>

@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+
+
+{% set unique_id = [] %}
+{% for i in 1..30 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set alphaUpper = alpha|upper %}
+    {% set numbers = '0123456789' %}
+    {% set randomCharacter = random(alpha ~ alphaUpper ~ numbers ~ '-_') %}
+    {% set unique_id = unique_id|merge([randomCharacter]) %}
+{% endfor %}
+{% set unique_id = unique_id|join %}
+{% set collapse_unique_id = 'collapse_' ~ unique_id %}
+<div class="panel publication_view">
+  {% if title %}
+      <div class="v-publicacion">
+        <div role="tab" id="{{ unique_id }}">
+              <div class="list-group-item collapsable-item" data-toggle="collapse" data-target="#{{ collapse_unique_id }}" data-parent="#accordion">      
+                <div class="button_wrapper valign">
+                  <div class="ghost valign"></div>
+                  <span class="glyphicon glyphicon-plus valign"></span>
+                </div>
+                <div class="valign list_title">
+                  <div class="ghost valign">
+                  </div>
+                  <div class="title_container valign">
+                    {{ title }}
+                  </div>
+                </div>
+              </div>
+        </div> 
+      </div>
+  {% endif %}
+  <div id="{{ collapse_unique_id }}" class="panel-collapse collapse clearfix" role="tabpanel" aria-labelledby="{{ unique_id}} ">  
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row',
+        ]
+      %}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

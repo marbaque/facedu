@@ -1,0 +1,54 @@
+{#
+  Tema UCR
+  Desarrollado por:
+  - Marco Artavia Quesada
+  - Rubén Jiménez Goñi
+#}
+
+{# Nav de la UCR #}
+<div class="page">
+  <nav class="navbar header__firma-ucr">
+
+    {# Logo de la UCR #}
+    <div class="navbar-header">
+      <a href="http://ucr.ac.cr" class="header__firma-ucr-logo"></a>
+    </div>
+
+    <div class="hidden-xs">
+
+      {# Botón de login / logout #}
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          {% if logged_in %}
+            <a class="header__link" href="{{ url('<front>') }}/user/logout">Salir</a>
+          {% else %}
+            <a class="header__link" href="{{ url('<front>') }}/user/login">Entrar</a>
+          {% endif %}
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="maintenance__container">
+      <div class="spacer"></div>
+      <div class="maintenance__box">
+        <div class="maintenance__logo"></div>
+        <h1>Sitio en mantenimiento</h1>
+        <hr/>
+        <h2>Pronto estaremos de regreso, gracias por su comprensión</h2>
+        <hr/>
+        <br>
+        <h2>Contacto:</h2>
+        <ul>
+          <li>Correo electrónico: <a href="mailto:example@ucr.ac.cr" target="_blank">example@ucr.ac.cr</a></li>
+          <li>Teléfono: <a tel="50625110000" target="_blank">(506) 2511-0000</a></li>
+        </ul>
+
+      </div>
+      <div class="maintenance__copyright">
+        <br>
+        <p>©2016-2018 Universidad de Costa Rica</p>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<ul class="frontpage__servicios">
+    {% for row in rows %}
+        <li>{{ row.content }}</li>
+    {% endfor %}
+</ul>

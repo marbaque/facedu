@@ -1,0 +1,12 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="carrusel__frontpage-contenedor slick__carousel" >
+    {% for item in items%}
+        {{ item.content }}
+    {% endfor %}
+</div>

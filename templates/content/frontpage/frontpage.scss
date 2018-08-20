@@ -1,0 +1,71 @@
+.page {
+
+    /* ================================================================================ */
+    /* = Compartido =================================================================== */
+    /* ================================================================================ */
+
+    .frontpage-titulo, .frontpage-titulo a {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        border-color: #ECECEC;
+    }
+
+    /* ================================================================================ */
+    /* = Vista proyectos ============================================================== */
+    /* ================================================================================ */
+
+    .frontpage__proyectos {
+        background-color: white;
+        border-radius: 3px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    /* ================================================================================ */
+    /* = Vista servicios ============================================================== */
+    /* ================================================================================ */
+
+    .frontpage__servicios {
+        list-style: none;
+        padding-left: 0; 
+
+        li {
+            display: inline-block;
+            margin: 15px;
+        }
+    }
+
+    /* ================================================================================ */
+    /* = Vista contacto =============================================================== */
+    /* ================================================================================ */
+
+    // Este es un fix al problema de que Bootstrap utiliza márgenes negativos en los forms
+    // por defecto. Habría que removerlos para quitar esto.
+    .frontpage__contacto-titulo {
+        margin-left: -20px;
+    }
+
+    .frontpage__contacto {
+        background-color: white;
+        border-radius: 3px;
+        margin: 20px;
+        padding: 30px;
+
+        .form-submit {
+            background-color: #f37021;  
+            border: none;
+            border-radius: 0;
+            color: white;
+            font-weight: bold;
+
+        }
+    }
+
+    .panel-frontpage{
+        border-radius: 3px;
+        padding: 0px;
+        margin: 20px;
+        border-color: #ECECEC;
+    }
+}

@@ -1,0 +1,17 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+
+<ul class="galeria-header__links">
+  {% for item in items %}
+  	{% if item.in_active_trail %}
+  	  <li class="galeria-header__link--active">{{ link(item.title, item.url) }}</li>
+  	{% else %}
+  	  <li>{{ link(item.title, item.url) }}</li>
+	{% endif %}
+ {% endfor %}
+</ul> 

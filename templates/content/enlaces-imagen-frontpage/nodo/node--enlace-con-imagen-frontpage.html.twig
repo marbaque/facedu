@@ -1,0 +1,16 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="col-xs-12 col-sm-6 col-md-12 no-padding">
+  <div class="panel panel-frontpage text-center">
+    <div class="frontpage-titulo panel-heading text-left">{{ label }}</div>
+    <a class="sanitize_href" href="{{ content.field_enlace_imagen_front_enlace }}">
+        {{ content.field_enlace_imagen_front_imagen }}
+        <i class="accessible_elem">{{ content.field_enlace_imagen_front_enlace['#title'] }}</i>
+    </a>
+  </div>
+</div>

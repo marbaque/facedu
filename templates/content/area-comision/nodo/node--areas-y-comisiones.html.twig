@@ -1,0 +1,65 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+
+{% set unique_id = url | replace({ '/' : '_' }) %}
+{% set collapse_unique_id = 'collapse_' ~ url | replace({ '/' : '_' }) %}
+<div class="panel n-area-comision-referencia">
+  <div>
+    <div role="tab" id="{{ unique_id }}">
+          <div class="list-group-item collapsable-item collapsed" data-toggle="collapse" data-target="#{{ collapse_unique_id }}" data-parent="#accordion">      
+            <div class="button_wrapper valign">
+              <div class="ghost valign"></div>
+              <span class="glyphicon glyphicon-plus valign"></span>
+            </div>
+            <div class="valign list_title">
+              <div class="ghost valign">
+              </div>
+              <div class="title_container valign">
+                {{ label }}
+              </div>
+            </div>
+          </div>
+    </div>
+  </div> 
+  <div id="{{ collapse_unique_id }}" class="panel-collapse collapse clearfix" role="tabpanel" aria-labelledby="{{ unique_id}} ">
+    <div class="n-area-comision__contenido panel-body col-xs-12">
+	    <br>
+      <div class="row n-area-comision-full">
+        {% if content.field_area_comision_imagen | render %}
+          <div class="n-pagina__imagen col-xs-12 col-sm-4 col-md-2">
+          {{ content.field_area_comision_imagen }}
+          </div>
+        {% endif %}
+
+        {% if content.field_area_comision_enlace | render %}
+          <div class="n-pagina__body col-xs-12 col-sm-4 col-md-4">
+            {{ content.field_area_comision_enlace }}
+          </div>
+        {% endif %}
+
+        {% if content.field_area_comision_imagen | render and content.field_area_comision_enlace | render %}
+            <div class="n-pagina__body col-xs-12 col-md-6">
+        {% else %}
+          {% if content.field_area_comision_imagen | render %}
+            <div class="n-pagina__body col-xs-12 col-md-10">
+          {% else %}
+             {% if content.field_area_comision_enlace | render %}
+                <div class="n-pagina__body col-xs-12 col-md-8">
+              {% else %}
+                <div class="n-pagina__body col-xs-12">
+              {% endif %}
+          {% endif %}
+        {% endif %}
+            {{ content.body }}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

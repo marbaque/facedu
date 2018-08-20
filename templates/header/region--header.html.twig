@@ -1,0 +1,39 @@
+{#
+  Tema UCR
+  Desarrollado por:
+  - Marco Artavia Quesada
+  - Rubén Jiménez Goñi
+  {{ elements.call_to_action }}
+#}
+
+{# Nav de la UCR #}
+<nav class="navbar header__firma-ucr">
+
+  {# Logo de la UCR #}
+  <div class="navbar-header">
+    <div class="header__firma-ucr-logo">Universidad de Costa Rica</div>
+    <a class="header__logo" title="Facultad" href="{{ url('<front>') }}">Facultad de Educación</a>
+    <div class="col-xs-12 col-sm-4">
+      {{ elements.languageswitcher }}
+      {{ elements.call_to_action }}
+    </div>
+  </div>
+  <div class="hidden-xs buscar">
+    {{ elements.languageswitcher }}
+    {# Botón de búsqueda #}
+    <form action="{{ url('<front>') }}/search/node" method="get" accept-charset="UTF-8" class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <label class="sr-only" for="buscar">Buscar</label>
+          <input id="buscar" type="search" class="form-control" name="keys" size="12" maxlength="128" placeholder="Buscar" title="Buscar" required="true"/>
+          <span class="input-group-btn">
+          <button id="btn_buscar"class="btn btn-default" title="Buscar" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"><i class="accessible_elem">{{ 'buscar' | t }}</i></span>
+          </button>
+        </span>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</nav>

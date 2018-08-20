@@ -1,0 +1,125 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+@import '../shared';
+
+.page {
+
+    /* ================================================================================ */
+    /* = Firma UCR ==================================================================== */
+    /* ================================================================================ */
+
+    .header__firma-ucr {
+        margin: 0px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 0px;
+        background-color: #41ADE7;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media (min-width: 550px) {
+            padding: 10px 20px;
+        }
+        .buscar {
+            flex-grow: 1;
+        }
+    }
+    .navbar-header {
+        display: flex;
+        align-items: center;
+    }
+    .header__firma-ucr-logo {
+        background-image: url("../../images/header/firma-ucr.svg");
+        background-repeat: no-repeat;
+        background-size: 330px 50px;
+        background-position: center;
+        width: 200px;
+        height: 59px;
+        display: block;
+        text-indent: -999px;
+        float: left;
+        @media (max-width: 550px) {
+            width: 30%;
+            background-size: contain;
+            background-image: url("../../images/header/firma-ucr-movil.svg");
+        }
+    }
+
+    .header__link {
+        color: #FFF;
+        &:hover, &:focus {
+            background-color: initial;
+            color: #FFF;
+            text-decoration: underline;
+        }
+    }
+
+    .header__logo { //logo de facultad
+        background-image: url("../../images/header/logo-facultadedu.png");
+        background-image: url("../../images/header/logo-facultadedu.svg");
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: center;
+        border-radius: 0;
+        width: 200px;
+        height: 62px;
+        display: block;
+        margin-left: 1.5em;
+        text-indent: -999px;
+        position: relative;
+    }
+
+    .header__logo:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 60%;
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: -.5em;
+    }
+
+    /* ================================================================================ */
+    /* = Header ======================================================================= */
+    /* ================================================================================ */
+
+
+
+    /*Language Style*/
+    .language-list{
+        list-style: none;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+
+        @media(max-width:767px){
+            width: 100%;
+            float: none;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        a{
+            color:white!important;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .is-active{
+            color: #ECECEC !important;
+        }
+    }
+}

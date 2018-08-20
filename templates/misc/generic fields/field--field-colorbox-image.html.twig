@@ -1,0 +1,15 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="cBoxLink">
+  {{ items.0.content }}
+</div>
+<div class="cBoxContainer">
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

@@ -1,0 +1,69 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{% set unique_id = url | replace({ '/' : '_' }) %}
+{% set collapse_unique_id = 'collapse_' ~ url | replace({ '/' : '_' }) %}
+<div class="n-proyecto-referencia panel">
+  <div>
+    <div role="tab" id="{{ unique_id }}">
+          <div class="list-group-item collapsable-item collapsed" data-toggle="collapse" data-target="#{{ collapse_unique_id }}" data-parent="#accordion">      
+            <div class="button_wrapper valign">
+              <div class="ghost valign"></div>
+              <span class="glyphicon glyphicon-plus valign"></span>
+            </div>
+            <div class="valign list_title">
+              <div class="ghost valign">
+              </div>
+              <div class="title_container valign">
+                {{ label }}
+              </div>
+            </div>
+          </div>
+    </div>
+  </div> 
+  <div id="{{ collapse_unique_id }}" class="panel-collapse collapse clearfix" role="tabpanel" aria-labelledby="{{ unique_id}} ">
+    <div class="n-proyecto__contenido panel-body">
+      <div class="col-xs-12 col-md-3">
+        <h3>
+          <a href="{{ url }}">
+            {{ label}}
+          </a>
+        </h3>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        {{ content.body }}
+      </div>
+      <div class="panel-body col-xs-12 col-md-3">
+        
+        {% if content.field_proyecto_participantes | render %}
+          <p>
+            <b class="title">
+              {{ 'Participants' | t }}:
+            </b>
+          </p>
+
+          <ul class="n-proyecto-personas">
+            {{ content.field_proyecto_participantes }}
+          </ul>
+          <br>
+        {% endif %}
+        {% if content.field_proyecto_coordinadores | render %}
+          <p>
+            <b class="title">
+              {{ 'Coordinators' | t }}:
+            </b>
+          </p>
+
+          <ul class="n-proyecto-personas">
+            {{ content.field_proyecto_coordinadores }}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+

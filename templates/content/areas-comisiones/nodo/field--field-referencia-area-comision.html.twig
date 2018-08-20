@@ -1,0 +1,14 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{#
+    Este enlace puede estar "corrupto" con comentarios de HTML que deben
+    ser limpiados
+#}
+{% for item in items %}
+    {{ item.content }}
+{% endfor %}

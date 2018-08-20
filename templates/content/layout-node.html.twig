@@ -1,0 +1,14 @@
+<div class="hidden layout-ucr-2016"></div>
+<div class="row">
+	<div class="spacer"></div>
+  {% if content.left %}
+	  <div class="col-xs-12 col-md-7 col-md-offset-1">
+	    {{ content.left }}
+	  </div>
+  {% endif %}
+  {% if content.right %}
+	  <div class="col-xs-12 col-md-3">
+	    {{ content.right }}
+	  </div>
+  {% endif %}
+</div>

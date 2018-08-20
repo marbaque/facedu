@@ -1,0 +1,396 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+@import '../shared';
+
+.page {
+
+    /* ================================================================================ */
+    /* = Menú principal =============================================================== */
+    /* ================================================================================ */
+
+    $main-background: #204C6F;
+    $main-background-hover: #41ADE7;
+    $main-background-active: #0c344e;
+
+    $main-dropdown:white;
+    $main-dropdown-active: #ECECEC;
+
+    $main-dropdown-mobile: white;
+    $main-dropdown-mobile-active: #ECECEC;
+
+    /* ================================================================================ */
+    /* = Colores de Texto =============================================================== */
+    /* ================================================================================ */
+
+
+    $main-background-text-color: white;
+    $main-background-active-text-color: white;
+    $main-background-hover-text-color: white;
+
+    $main-dropdown-text-color: #666666;
+    $main-dropdown-hover-text-color: #666666;
+
+    $main-dropdown-mobile-text-color: #666666;
+    $main-dropdown-mobile-hover-text-color: #666666;
+
+
+
+    .main-nav {
+        margin: 0px;
+        padding: 0px 15px;
+        border: none;
+        border-radius: 0px;
+        background: $main-background;
+    }
+
+    .main-link {
+        text-transform: none;
+        color: $main-background-text-color !important;
+    }
+
+    .main-link-active {
+        @extend .main-link;
+        background: $main-background-active;
+        color:$main-background-active-text-color !important;
+    }
+
+    .dropdown-menu .main-link {
+        background: $main-dropdown;
+        color: $main-dropdown-text-color !important;
+        @media(max-width: $xs-max) {
+            color:$main-dropdown-mobile-text-color!important;
+            background: $main-dropdown-mobile!important;
+        }
+    }
+
+    .main-link, .main-link-active {
+        &:focus {
+            color: $main-background-hover-text-color !important;
+            background-color: $main-background-active;
+        }
+
+        &:hover{
+           color: $main-background-hover-text-color !important;
+           background-color: $main-background-hover;
+        }
+
+    }
+
+
+    .dropdown-menu .main-link, .dropdown-menu .main-link-active {
+
+        &:hover, &:focus {
+            color: $main-dropdown-hover-text-color !important;
+            background: $main-dropdown-active;
+        }
+
+        @media(max-width: $xs-max) {
+            &:hover, &:focus {
+                color:$main-dropdown-mobile-hover-text-color!important;
+                background-color: $main-dropdown-mobile-active!important;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0px 0px;
+    }
+
+    .dropdown-menu li:not(:last-child){
+        border-bottom: solid 1px white;
+    }
+
+    @media(min-width: $xs-max) {
+        .dropdown-menu .main-link {
+            text-transform: none;
+            padding: 10px 20px !important;
+            font-weight: lighter;
+        }
+    }
+
+    .main-button {
+        margin: 0px 20px;
+        padding: 15px 15px;
+        border-radius: 0px ;
+        border: none;
+        color: #FFFFFF !important;
+    }
+
+    .page li.main-home-li {
+        line-height:0;
+    }
+
+    .main-home {
+        width: 50px;
+        height: 50px;
+
+        a {
+            display: inline-block !important;
+            background-image: url("../../images/menu/main/home.svg");
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: center;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    // ???
+    .nav > li > a.main-link{
+        display: inline-block;
+    }
+
+    // Cuando una opción del menú despliega su dropdown de opciones
+    // Esto evita que al hacer click en el afuera y sostener,
+    // la opción del menú se ponga blanca
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        background: $main-background-active;
+    }
+
+    /* ================================================================================ */
+    /* = Call to action =============================================================== */
+    /* ================================================================================ */
+
+    .menu__cta {
+        margin: 20px 40px 0px 0px;
+        float: right;
+        text-align: center;
+        list-style: none;
+
+        @media(max-width:767px){
+            width: 100%;
+            float: none;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+        }
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 2px;
+                margin: 0 5px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                &:hover, &:focus {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+
+    .menu__cta-facebook {
+        background-image: url("../../images/menu/cta/facebook.svg");
+    }
+
+    .menu__cta-instagram {
+        background-image: url("../../images/menu/cta/instagram.svg");
+    }
+
+    .menu__cta-mediación {
+        background-image: url("../../images/menu/cta/mediacion.svg");
+    }
+
+    .menu__cta-preguntas {
+        background-image: url("../../images/menu/cta/preguntas.svg");
+    }
+
+    .menu__cta-twitter {
+        background-image: url("../../images/menu/cta/twitter.svg");
+    }
+
+    .menu__cta-wiki {
+        background-image: url("../../images/menu/cta/wiki.svg");
+    }
+
+    .menu__cta-youtube {
+        background-image: url("../../images/menu/cta/youtube.svg");
+    }
+
+
+    .menu__cta-contact, .menu__cta-contacto {
+        background-image: url("../../images/menu/cta/contacto.svg");
+    }
+
+    /* ================================================================================ */
+    /* = Call to action =============================================================== */
+    /* ================================================================================ */
+
+    .menu__breadcrumb{
+        ul{
+            padding:0;
+        }
+        li{
+            display:inline-block;
+            list-style: none;
+        }
+    }
+
+    /* ================================================================================ */
+    /* = Footer links ================================================================= */
+    /* ================================================================================ */
+
+    .menu__footer-links {
+        padding: 0;
+        list-style: none;
+
+        li {
+            height: 40px;
+        }
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            height: 40px;
+            line-height: 40px;
+
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menu__footer-icon {
+        display: inline-block;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+    }
+
+    .menu__footer-icon-actividades,.menu__footer-icon-activities,.menu__footer-icon-calendario,.menu__footer-icon-calendar {
+        background-image: url("../../images/menu/footer-links/calendario.svg");
+    }
+
+    .menu__footer-icon-avisos,.menu__footer-icon-announcements {
+        background-image: url("../../images/menu/footer-links/avisos.svg");
+    }
+
+    .menu__footer-icon-galería, .menu__footer-icon-gallery {
+        background-image: url("../../images/menu/footer-links/galeria.svg");
+    }
+
+    .menu__footer-icon-enlaces,.menu__footer-icon-links {
+        background-image: url("../../images/menu/footer-links/enlaces.svg");
+    }
+
+    .menu__footer-icon-wiki {
+        background-image: url("../../images/menu/footer-links/wiki.svg");
+    }
+
+    .menu__footer-icon-preguntas, .menu__footer-icon-faq, .menu__footer-icon-questions{
+        background-image: url("../../images/menu/footer-links/preguntas.svg");
+    }
+
+    .menu__footer-icon-noticias,.menu__footer-icon-news {
+        background-image: url("../../images/menu/footer-links/noticias.svg");
+    }
+
+
+
+    /* ================================================================================ */
+    /* = Footer Logo ================================================================= */
+    /* ================================================================================ */
+    .footer_logos {
+        margin-top:2rem;
+    }
+
+    .footer__logo {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 175px;
+        height: 95px;
+        margin: 0 auto;
+    }
+
+    .footer_logo_1 {
+        background-image: url("../../images/footer/footer_logo_1.svg");
+    }
+
+    .footer_logo_2 {
+        background-image: url("../../images/footer/footer_logo_2.png");
+    }
+
+    .footer_logo_3 {
+        background-image: url("../../images/footer/footer_logo_3.png");
+    }
+
+    .footer_logo_4 {
+        background-image: url("../../images/footer/footer_logo_4.png");
+    }
+
+    .footer_logo_5 {
+        background-image: url("../../images/footer/footer_logo_5.png");
+    }
+
+    .footer_logo_6 {
+        background-image: url("../../images/footer/footer_logo_6.png");
+    }
+
+    .footer_logo_7 {
+        background-image: url("../../images/footer/footer_logo_7.png");
+    }
+
+    .footer_logo_8 {
+        background-image: url("../../images/footer/footer_logo_8.png");
+    }
+
+    .footer_logo_9 {
+        background-image: url("../../images/footer/footer_logo_9.png");
+    }
+
+    .footer_logo_10 {
+        background-image: url("../../images/footer/footer_logo_10.png");
+    }
+
+    /* ================================================================================ */
+    /* = Secondary navigation ========================================================= */
+    /* ================================================================================ */
+
+    .menu__secondary-navigation-1 {
+        padding: 0 15px;
+        list-style: none;
+    }
+
+    .menu__secondary-navigation-1 > div {
+        padding: 10px 0;
+        min-height: 20px;
+    }
+
+    .menu__secondary-navigation-link-1 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .menu__secondary-navigation-link-1 + .menu__secondary-navigation-link-1{
+        margin-top: 15px;
+    }
+
+    .menu__secondary-navigation-2 {
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu__secondary-navigation-3 {
+        padding: 0 0 0 20px;
+        list-style: none;
+    }
+
+    .menu__secondary-navigation-link-2, .menu__secondary-navigation-link-3 {
+        text-transform: none;
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}

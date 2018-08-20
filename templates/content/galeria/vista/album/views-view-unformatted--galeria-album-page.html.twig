@@ -1,0 +1,14 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="masonry-grid">
+  {% for row in rows %}
+    <div{{ row.attributes.addClass('masonry-grid-item') }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

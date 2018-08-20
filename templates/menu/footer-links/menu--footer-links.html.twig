@@ -1,0 +1,15 @@
+{#
+  Tema UCR
+  Desarrollado por:
+  - Marco Artavia Quesada
+  - Rubén Jiménez Goñi
+#}
+<ul class="menu__footer-links">
+  {% for item in items %}
+    <li>
+      <a href="{{ item.url }}">
+        <span class="menu__footer-icon menu__footer-icon-{{ item.title | lower }}"></span><span>{{ item.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

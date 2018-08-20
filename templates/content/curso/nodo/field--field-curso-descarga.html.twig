@@ -1,0 +1,13 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="table_download">
+	{% for item in items %}
+			<a href="{{  file_url( item.content['#file'].getFileUri() ) }}" target="_blank">
+  		</a>
+	{% endfor %}
+</div>

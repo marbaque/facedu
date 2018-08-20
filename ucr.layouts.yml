@@ -1,0 +1,34 @@
+frontpage:
+  label: Frontpage
+  category: UCR Layouts
+  template: templates/content/frontpage/layout-frontpage
+  regions:
+    top:
+      label: Top
+    left:
+      label: Left side
+    right:
+      label: Right side
+node:
+  label: Node
+  category: UCR Layouts
+  template: templates/content/layout-node
+  regions:
+    left:
+      label: Left side
+    right:
+      label: Right side
+galeria:
+  label: Galería
+  category: UCR Layouts
+  template: templates/content/galeria/layout-galeria
+  regions:
+    all:
+      label: Todo
+calendario:
+  label: Calendario
+  category: UCR Layouts
+  template: templates/content/actividad/layout-calendario
+  regions:
+    all:
+      label: Todo

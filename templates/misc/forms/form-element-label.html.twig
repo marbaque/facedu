@@ -1,0 +1,10 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+{% if title is not empty or required -%}
+  <label{{ attributes.addClass('control-label') }}>{{ title }}</label>
+{%- endif %}

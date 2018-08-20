@@ -1,0 +1,284 @@
+//
+// Tema UCR
+//
+// Desarrollado por:
+// - Marco Artavia Quesada
+// - Rubén Jiménez Goñi
+
+//
+// Estilo de elementos base que pueden ser modificados por otras hojas de estilo
+//
+
+@import 'shared';
+
+/* ================================================================================ */
+/* = Normalize ==================================================================== */
+/* ================================================================================ */
+
+// Quitar outline automático de Chrome
+:focus {
+    outline: none;
+}
+
+/* ================================================================================ */
+/* = HTML y Body ================================================================== */
+/* ================================================================================ */
+
+html {
+    @media (min-width: $xs-min) {
+        font-size: 52.5%;
+    }
+
+    @media (min-width: $sm-min) {
+    font-size: 57.5%;
+    }
+
+    @media (min-width: $md-min) {
+        // En unidades rem, equivale a 10px
+        font-size: 62.5%;
+    }
+
+    @media (min-width: $md-min) {
+        font-size: 67.5%;
+    }
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+}
+
+/* ================================================================================ */
+/* = Esto mantiene el footer abajo ================================================ */
+/* ================================================================================ */
+
+* {
+  margin: 0;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.page {
+    min-height:100%;
+    position: relative;
+
+    //.page--header {
+    //}
+
+    .page--content {
+        padding-bottom: $footer-height;
+    }
+
+    .page--footer {
+        width: 100%;
+        height: $footer-height;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/* ================================================================================ */
+/* = Tamaños de letras y colores ================================================== */
+/* ================================================================================ */
+
+.page {
+  min-height:100%;
+
+  h1, h1 a {
+    color: #204C6F;
+    font-size: 2.7rem;
+    line-height: 3.0rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter;
+  }
+
+  h2, h2 a {
+    color: #666666;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter;
+  }
+
+  h3, h3 a {
+    color: #666666;
+    font-size: 1.9rem;
+    line-height: 2.1rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: lighter;
+  }
+
+  h4, h4 a {
+    color: #666666;
+    font-size: 1.9rem;
+    line-height: 2.1rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.527rem;
+    font-weight: 300;
+  }
+
+  li {
+    color: #204C6F;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: lighter;
+  }
+
+  hr {
+    margin: 10px 0px;
+  }
+
+  a {
+    display: inline-block;
+    color:#204C6F;
+
+    &:hover {
+      color: #0090D8;
+      text-decoration: underline;
+    }
+
+  }
+
+  a.view-more {
+    text-transform:uppercase;
+    font-size: 1.2rem;
+  }
+
+  p small, p small a {
+    font-size: 1.4rem;
+  }
+}
+
+/* ================================================================================ */
+/* = Otros ======================================================================== */
+/* ================================================================================ */
+
+.page .page--content {
+    form {
+    margin-bottom: 20px;
+
+    .btn{
+      float: right;
+    }
+  }
+}
+
+.r-content {
+  margin-bottom: 100px;
+}
+
+.accessible_elem {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+}
+
+/* ================================================================================ */
+/* = Estilo básico para carruseles ================================================ */
+/* ================================================================================ */
+
+.page {
+
+  .slick__carousel {
+    // Para que no se vea mientras carga
+    opacity: 0;
+    transition: opacity fast;
+
+    // Borde
+    // border: 1px solid #ECECEC;
+    // border-radius: 4px;
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    background-color: white;
+
+    // Espacio arriba
+    padding-top: 10px;
+
+    // Espacio para las flechas
+    padding-left: 40px;
+    padding-right: 40px;
+
+    // Espacio para los dots
+    padding-bottom: 30px;
+  }
+
+  .slick__item {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-arrow {
+    padding: 0;
+  }
+
+  .slick-dots {
+    bottom: 5px;
+    left: 0px;
+  }
+
+  .slick__left, .slick__right {
+    // Se quita estilo por defecto
+    border: none;
+
+    // Posicionamiento del botón
+    position: absolute;
+    top: 40%;
+
+    // Estilo
+    background-color: white;
+    color: white;
+    font-size: 30px;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px;
+
+
+    &:hover, &:focus {
+      outline: none;
+      text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px;
+    }
+  }
+
+  .slick__left {
+    left: 6px;
+  }
+
+  .slick__right {
+    right: 6px;
+  }
+
+  .ghost{
+    height:100%;
+  }
+
+  .valign{
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+  .padding-article{
+    padding: 0px 0 60px 0;
+  }
+
+  .block-title{
+   margin: 0;
+   padding: 2.5px 15px;
+  }
+
+}

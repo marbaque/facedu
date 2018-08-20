@@ -1,0 +1,20 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div{{ attributes.addClass('form-group') }}>
+  {{ label }}
+  
+  {% if type == "item" %}
+    <p class="form-control-static">
+  {% endif %}
+  
+  {{ children }}
+  
+  {% if type == "item" %}
+    </p>
+  {% endif %}
+</div>

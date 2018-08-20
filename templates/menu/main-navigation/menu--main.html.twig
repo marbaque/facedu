@@ -1,0 +1,152 @@
+{#
+  Tema UCR
+  Desarrollado por:
+  - Marco Artavia Quesada
+  - Rubén Jiménez Goñi
+#}
+
+{# ================================================================== #}
+{# == VARIABLES ===================================================== #}
+{# ================================================================== #}
+
+{# TODO Mejorar esto #}
+{# Se pregunta si la página actual es la principal #}
+{% set isFront = true %}
+{% for item in items %}
+  {% if item.in_active_trail %}
+    {% set isFront = false %}
+  {% endif %}
+{% endfor %}
+
+{# Clases para un link principal sin dropdown #}
+{%
+set linkClassesNoDropdown = {
+  'class' : ['main-link'],
+}
+%}
+{%
+set linkClassesNoDropdownActive = {
+  'class' : ['main-link', 'main-link-active'],
+}
+%}
+
+{# Clases para un sublink #}
+{%
+set sublinkClasses = {
+  'class' : ['main-link'],
+}
+%}
+
+{# ================================================================== #}
+{# == OUTPUT ======================================================== #}
+{# ================================================================== #}
+
+<nav class="navbar main-nav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 no-padding">
+
+        {# Botón de Toggle para móviles #}
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed main-button main-link" data-toggle="collapse" data-target="#menu-ucr" aria-expanded="false">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> MENU
+          </button>
+        </div>
+
+        {# Menu #}
+        <div class="collapse navbar-collapse" id="menu-ucr">
+
+          {# Output de todos los links #}
+          <ul class="nav navbar-nav">
+
+            {# Para cada item del menu #}
+            {% for item in items %}
+
+              {# Se pone el primer <li> #}
+
+              {# Se hace el output del link actual #}
+
+              {% if item.title == 'Hom' or item.title == 'Inici' %}
+                <li class = "main-home">
+
+                  {# Si es home #}
+
+                  <a href="{{ url('<front>') }}" class="hidden-xs
+                    {% if not isFront %}
+                      main-link
+                    {% else %}
+                      main-link-active
+                    {% endif  %}
+                  ">
+                    <i class="accessible_elem">{{ item.title }}</i>
+                  </a>
+
+              {% else %}
+                <li
+                  {% if item.below %}
+                    class = "dropdown"
+                  {% endif %}
+                  >
+
+                  {# Si no es home #}
+
+                  {% if not item.below %}
+
+                    {# Si no hay items debajo #}
+                    {% if not item.in_active_trail %}
+                      {{ link(item.title, item.url, linkClassesNoDropdown) }}
+                    {% else  %}
+                      {{ link(item.title, item.url, linkClassesNoDropdownActive) }}
+                    {% endif %}
+
+                  {% else %}
+
+                    {# Si hay items debajo #}
+                    {% if not item.in_active_trail %}
+                      <a href={{ item.url }}
+                        class="dropdown-toggle main-link"
+                        data-toggle="dropdown"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {{ item.title }}
+                       <span class="caret"></span>
+                      </a>
+                    {% else  %}
+                      <a href={{ item.url }}
+                        class="dropdown-toggle main-link main-link-active"
+                        data-toggle="dropdown"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {{ item.title }}
+                        <span class="caret"></span>
+                      </a>
+                    {% endif %}
+
+                  {% endif %}
+
+                {% endif %}
+
+                {# Si hay subitems #}
+                {% if item.below %}
+
+                  {# se ponen los sublinks #}
+                  <ul class="dropdown-menu">
+                    {% for subitem in item.below %}
+                      <li>
+                        {{ link(subitem.title, subitem.url, sublinkClasses) }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

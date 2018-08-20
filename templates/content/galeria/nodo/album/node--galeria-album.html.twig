@@ -1,0 +1,26 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<div class="n-galeria-album__id sr-only">
+  {{- node.id() -}}
+</div>
+<div class="col-xs-12">
+  <div class="n-galeria-album__galleria"></div>
+</div>
+<div class="col-xs-8">
+  <p class="n-galeria-album__title"></p>
+  <p class="n-galeria-album__description"></p>
+</div>
+<div class="col-xs-4">
+  <div class="n-galeria-album__back">
+    <p class="text-right">
+      <a href="{{ url('<front>') }}/galeria-albumes" class="btn btn-default">
+        {{ 'Volver a álbumes' | t }}
+      </a>
+    </p>
+  </div>
+</div>

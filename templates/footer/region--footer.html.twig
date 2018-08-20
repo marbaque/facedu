@@ -1,0 +1,91 @@
+{#
+  Tema desarrollado para la UCR
+
+  Autores:
+  - Rubén Jiménez Goñi
+  - Marco Artavia Quesada
+#}
+<nav class="footer__color_1">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-2">
+				{# Enlaces del footer #}
+       			{{ elements.footer_links }}
+			</div>
+			<div class="col-xs-12 col-md-10 footer_logos">
+				{{ elements.footer_logos }}
+			</div>
+		</div>
+	</div>
+</nav>
+<nav class="footer footer__color_2">
+	<div class="container-fluid">
+		<div class="row visible-xs"> {# Solo para pantallas xs #}
+			{# Botón de login / logout #}
+			<div class="col-xs-12">
+				<ul class="nav navbar-nav">
+					<li class="text-center">
+						{% if logged_in %}
+							<a class="region-header__link" href="{{ url('<front>') }}/user/logout">Salir</a>
+						{% else %}
+							<a class="region-header__link" href="{{ url('<front>') }}/user/login">Entrar</a>
+						{% endif %}
+					</li>
+				</ul>
+			</div>
+			{# Botón de búsqueda #}
+			<div class="col-xs-offset-2 col-xs-8">
+				<form action="{{ url('<front>') }}/search/node" method="get" accept-charset="UTF-8" role="search">
+					<div class="form-group">
+						<div class="input-group">
+							<input id="buscar" type="search" class="form-control" name="keys" size="12" maxlength="128" placeholder="Buscar" required="true"/>
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"><i class="accessible_elem">Buscar</i></span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row footer__info ">
+			<br>
+			{# Drupal 8 | Centro de Informática #}
+			<div class="hidden-xs col-sm-6">
+				<p class="text-left">
+					<small>
+						Desarollado con
+						<a href="https://www.drupal.org/" target="_blank">Drupal 8</a> |
+						<a href="http://ci.ucr.ac.cr/" target="_blank">Centro de Informática</a>
+					</small>
+				</p>
+			</div>
+			<div class="visible-xs col-xs-12">
+				<p class="text-center">
+					<small>
+						Desarollado con
+						<a href="https://www.drupal.org/" target="_blank">Drupal 8</a> |
+						<a href="http://ci.ucr.ac.cr/" target="_blank">Centro de Informática</a>
+					</small>
+				</p>
+			</div>
+
+			{# Universidad de Costa Rica #}
+			<div class="hidden-xs col-sm-6">
+				<p class="text-right">
+					<small>
+						©2016 <a href="http://ucr.ac.cr/" target="_blank">Universidad de Costa Rica</a>
+					</small>
+				</p>
+			</div>
+			<div class="visible-xs col-xs-12">
+				<p class="text-center">
+					<small>
+						©2016 <a href="http://ucr.ac.cr/" target="_blank">Universidad de Costa Rica</a>
+					</small>
+				</p>
+			</div>
+		</div>
+	</div>
+</nav>
