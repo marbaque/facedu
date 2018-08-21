@@ -5,11 +5,59 @@
 // - Marco Artavia Quesada
 // - Rubén Jiménez Goñi
 
-//
-// Estilo de elementos base que pueden ser modificados por otras hojas de estilo
-//
 
-@import 'shared';
+// Estilo de elementos base que pueden ser modificados por otras hojas de estilo
+@import '_shared';
+
+/* ================================================================================ */
+/* = Header ==================================================================== */
+/* ================================================================================ */
+@import 'header/_header';
+
+/* ================================================================================ */
+/* = Content ==================================================================== */
+/* ================================================================================ */
+@import 'content/_content';
+
+@import 'content/actividad/_actividad';
+@import 'content/actividad/_calendario';
+@import 'content/area-comision/_area-comision';
+@import 'content/areas-comisiones/_areas-comisiones';
+@import 'content/contacto/_contacto';
+@import 'content/curso/_curso';
+@import 'content/cursos/_cursos';
+@import 'content/descargas/_descargas';
+@import 'content/descargas-icono/_descargas-icono';
+@import 'content/enlaces/_enlaces';
+@import 'content/enlaces-icono/_enlaces-icono';
+@import 'content/enlaces-imagen-frontpage/_enlaces-imagen';
+@import 'content/frontpage/_frontpage';
+@import 'content/galeria/_galeria';
+@import 'content/grupos/_grupos';
+@import 'content/item_colapsable/_item_colapsable';
+@import 'content/items_colapsables/_items_colapsables';
+@import 'content/pagina/_pagina';
+@import 'content/persona/_persona';
+@import 'content/personas/_personas';
+@import 'content/proyecto/_proyecto';
+@import 'content/proyectos/_proyectos';
+@import 'content/publicacion/_publicacion';
+
+
+/* ================================================================================ */
+/* = Menu ==================================================================== */
+/* ================================================================================ */
+@import 'menu/_menu';
+
+/* ================================================================================ */
+/* = Misc ==================================================================== */
+/* ================================================================================ */
+@import 'misc/_maintenance';
+
+/* ================================================================================ */
+/* = Footer ==================================================================== */
+/* ================================================================================ */
+@import 'footer/_footer';
 
 /* ================================================================================ */
 /* = Normalize ==================================================================== */
